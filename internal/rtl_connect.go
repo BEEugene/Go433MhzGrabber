@@ -18,7 +18,7 @@ func readStuff(scanner *bufio.Scanner) {
 }
 
 func main() {
-	cmd := exec.Command("cmd","/c", "C:/rtl_433/rtl_433.exe", "-G", "-F", "json")
+	cmd := exec.Command("cmd", "/c", "C:/rtl_433/rtl_433.exe", "-G", "-F", "json")
 
 	out, err := cmd.StdoutPipe()
 
