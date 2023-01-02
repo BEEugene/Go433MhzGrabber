@@ -1,0 +1,21 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Orders API",
+        "contact": {
+            "name": "API Support"
+        }
+    },
+    "paths": {
+        "/hello": {
+            "get": {
+                "description": "handle Hello",
+                "tags": [
+                    "hello"
+                ],
+                "summary": "handle Hello",
+                "responses": {}
+            }
+        }
+    }
+}

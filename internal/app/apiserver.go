@@ -5,6 +5,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"io"
 	"net/http"
+	
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
 type APIServer struct {
@@ -46,8 +48,16 @@ func (s *APIServer) configureLogger() error {
 
 func (s *APIServer) configureRouter() {
 	s.router.HandleFunc("/hello", s.handleHello())
+		// Swagger
+	s.router.PathPrefix("/swagger/").Handler(httpSwagger.WrapHandler)
 }
 
+// handleHello godoc
+// blah blah blah
+// @Summary      handle Hello
+// @Description handle Hello
+// @Tags         hello
+// @Router /hello [get]
 func (s *APIServer) handleHello() http.HandlerFunc {
 	// variables
 	// types

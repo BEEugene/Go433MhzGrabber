@@ -1,0 +1,13 @@
+info:
+  contact:
+    name: API Support
+  title: Orders API
+paths:
+  /hello:
+    get:
+      description: handle Hello
+      responses: {}
+      summary: handle Hello
+      tags:
+      - hello
+swagger: "2.0"
